@@ -1,22 +1,21 @@
 /* 
-F4E7FB F3DCDC F5BCBA E3AADD C8A8E9 C3C7F3
+#FF499E #D264B6 #A480CF #779BE7 #49B6FF #FFFF05
 Libre Baskerville 
 Source Sans Pro
 pairing serif and sans serif
  */
 
- body {
+body {
   background-color: #f5f5f5;
   margin-bottom: 100px;
   max-width: 90%;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .all {
   background-color: #c3c7f3;
 }
-
 
 .App-header {
   background-color: #282c34;
@@ -59,7 +58,6 @@ pairing serif and sans serif
   display: grid;
   height: 100px;
   place-items: center;
-  
 }
 
 .form-container {
@@ -185,7 +183,7 @@ input {
   color: #0066cc;
   text-align: center;
 }
-.navBar{
+.navBar {
   text-align: center;
 }
 
