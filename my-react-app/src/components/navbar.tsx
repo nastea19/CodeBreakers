@@ -9,6 +9,7 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
+import "../App.css";
 
 
 const pages = ['Lectii', 'Sugestii', 'APL'];
@@ -34,7 +35,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" className="navBar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
