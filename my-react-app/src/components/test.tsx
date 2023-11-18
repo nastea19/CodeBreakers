@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import "../App.css";
+
 
 interface Question {
   questionText: string;
@@ -56,7 +58,7 @@ const Quiz: React.FC = () => {
 
   return (
     <div>
-      <h1>Testarea nivelului</h1>
+      <h1 className="h1Col">Testarea nivelului</h1>
       {currentQuestion < questions.length ? (
         <div>
           <p>Question {currentQuestion + 1}</p>

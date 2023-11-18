@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Leaderboard from './leaderboard';
+import "../App.css";
+
 
 const APL: React.FC = () => {
 

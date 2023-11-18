@@ -1,3 +1,5 @@
+import "../App.css";
+
 export interface User {
     id: number;
     firstName: string;
