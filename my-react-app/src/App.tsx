@@ -4,16 +4,17 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import NavigationBar from "./components/NavigationBar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import APL from "./components/apl";
 import NavBar from "./components/navbar";
 import Quiz from "./components/test";
 
 function App() {
   return (
-    <><>
+    <><><>
       <NavBar />
 
-    </><Quiz /></>
-
+    </><Quiz />
+    </><APL></APL></>
 
   );
 }
