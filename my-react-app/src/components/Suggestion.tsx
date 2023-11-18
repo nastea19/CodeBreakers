@@ -53,7 +53,6 @@ function CommentsSection() {
 
   return (
     <Box>
-      <NavBar />
       <Typography variant="h2">Sugestii</Typography>
       <ul>
         {commentList.map((comment) => (
