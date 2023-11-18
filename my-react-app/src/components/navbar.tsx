@@ -82,7 +82,7 @@ function NavBar() {
             sx={{
               flexGrow: 1,
               textAlign: 'center',
-              backgroundColor: '#2E8B57', // Set the background color (here, a shade of green)
+              backgroundColor: '#779BE7', // Set the background color (here, a shade of green)
               borderRadius: '5px', // Rounded corners
               padding: '5px 10px', // Adjust padding for better visibility
             }}

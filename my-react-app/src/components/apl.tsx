@@ -10,11 +10,12 @@ const APL: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="apl-container">
       <NavBar />
-      <div
-        style={{ border: "1px solid black", padding: "10px", margin: "10px" }}
-      >
+      <div className="apl-content">
+        <div className="apl-description">
+          Proiectul de lege propus de Guvernul Republicii Moldova vizează modificarea Legii voluntariatului nr. 121/2010 și are ca scop dezvoltarea voluntariatului în domeniul protecției civile și apărării împotriva incendiilor. Iată un rezumat pe scurt:
+        </div>
         <h2>Descrierea Inițială:</h2>
         <ul>
           <li>Număr înregistrare: 408 h.878 2023-11-15</li>
@@ -39,7 +40,7 @@ const APL: React.FC = () => {
         </ul>
 
         <h2>Link către textul inițial:</h2>
-        <a href="https://www.parlament.md/LegislationDocument.aspx?Id=e18ff8fc-7e1a-469b-8e3a-02157fd3c5d5">
+        <a href="https://www.parlament.md/LegislationDocument.aspx?Id=e18ff8fc-7e1a-469b-8e3a-02157fd3c5d5" className="apl-links">
           https://www.parlament.md/LegislationDocument.aspx?Id=e18ff8fc-7e1a-469b-8e3a-02157fd3c5d5
         </a>
 
@@ -47,27 +48,27 @@ const APL: React.FC = () => {
         <ol>
           <li>
             <a href="https://www.parlament.md/LegislationDocument.aspx?Id=450e8dc8-60bb-40f3-896c-0096b9219cfb">
-              <strong>Aviz Ministerul Justiției</strong>
+              <strong className="apl-links">Aviz Ministerul Justiției</strong>
             </a>
           </li>
           <li>
             <a href="https://www.parlament.md/LegislationDocument.aspx?Id=ac83356f-9e8d-44e5-b89f-8a2068c5b211">
-              <strong>Sinteza propunerilor</strong>
+              <strong className="apl-links">Sinteza propunerilor</strong>
             </a>
           </li>
           <li>
             <a href="https://www.parlament.md/LegislationDocument.aspx?Id=b13c7a49-896a-46aa-a189-be7534d5b486">
-              <strong>Aviz CNA</strong>
+              <strong className="apl-links">Aviz CNA</strong>
             </a>
           </li>
           <li>
             <a href="https://www.parlament.md/LegislationDocument.aspx?Id=c99e4ffc-4e72-4b7f-a3ec-daafb2d41a42">
-              <strong>Tabel comparativ</strong>
+              <strong className="apl-links">Tabel comparativ</strong>
             </a>
           </li>
           <li>
             <a href="https://www.parlament.md/LegislationDocument.aspx?Id=08136287-2878-4a45-9211-e24c77bba852">
-              <strong>Avize instituții</strong>
+              <strong className="apl-links">Avize instituții</strong>
             </a>
           </li>
         </ol>
@@ -112,8 +113,8 @@ const APL: React.FC = () => {
           </li>
         </ul>
         <br />
-        <h3>Sunteti de acord sa implementam aceasta idee?</h3>
-        <div>
+        <h3>Sunteti de acord să implementăm această idee?</h3>
+        <div className="apl-buttons">
           <button onClick={() => handleButtonClick(1, "Da")}>Da</button>
           <button onClick={() => handleButtonClick(1, "No")}>Nu</button>
         </div>

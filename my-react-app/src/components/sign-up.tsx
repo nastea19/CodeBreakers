@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { useForm, Controller } from "react-hook-form";
+import { useForm, Controller , SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -24,7 +24,7 @@ function SignUp() {
   const { handleSubmit, control, formState } = useForm<FormData>();
   const navigate = useNavigate();
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit: SubmitHandler<FormData> = (data) => {
     const user: User = {
         id: 0,
         firstName: data.firstName,
@@ -33,12 +33,13 @@ function SignUp() {
         password: data.password,
         gender: data.gender,
         age: data.age,
-        country: data.country
+        country: data.country,
+        domainOfWork: data.domainOfWork,
     };
     const isRegisterSuccess = registerUser(user);
     if (isRegisterSuccess) {
       toast.success("Signed up successfully");
-      navigate("/sign-in");
+      navigate("/Quiz");
     } else {
       toast.error("User with this email already exist");
     }
@@ -103,7 +104,6 @@ function SignUp() {
 
         <div>
             <label>Country</label>
-            // ...
 
 <Controller
   name="country"
@@ -112,7 +112,7 @@ function SignUp() {
   rules={validationRules.country}
   render={({ field }) => (
     <div className="select-container">
-      <select {...field} className="custom-select">
+      <select {...field} className="custom-select-country">
         <option value="">Select</option>
         <option value="albania">Albania</option>
         <option value="andorra">Andorra</option>
@@ -167,7 +167,6 @@ function SignUp() {
     </div>
   )}
 />
-// ...
 
         </div>
 
@@ -180,7 +179,7 @@ function SignUp() {
             rules={validationRules.domainOfWork}
             render={({ field }) => (
             <div className="select-container">
-                <select {...field} className="custom-select">
+                <select {...field} className="custom-select-domain">
                 <option value="">Select</option>
                 <option value="it">Information Technology (IT)</option>
                 <option value="medicine">Healthcare and Medicine</option>

@@ -9,6 +9,7 @@ export interface User {
     gender: string;
     age: number;
     country: string;
+    domainOfWork: string,
   }
   
   const USERS_STORAGE_KEY = "users"; // Define a storage key for your users data
