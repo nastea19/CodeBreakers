@@ -3,6 +3,7 @@ import SignIn from "./sign-in";
 import SignUp from "./sign-up";
 import FirstPage from "./firstPage";
 import "../App.css";
+import Quiz from "./test";
 
 
 function Routing() {
