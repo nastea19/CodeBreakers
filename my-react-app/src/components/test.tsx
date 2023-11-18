@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
+import NavBar from "./navbar";
+import Footer from "./footer";
 
 interface Question {
   questionText: string;
@@ -65,6 +67,7 @@ const Quiz: React.FC = () => {
 
   return (
     <div>
+      <NavBar />
       <h1 className="h1Col">Testarea nivelului</h1>
       {currentQuestion < questions.length ? (
         <div>
@@ -96,6 +99,7 @@ const Quiz: React.FC = () => {
           <p>Scorul tau final: {score}</p>
         </div>
       )}
+      <Footer />
     </div>
   );
 };
