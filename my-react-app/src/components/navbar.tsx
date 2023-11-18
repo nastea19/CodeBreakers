@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import "../App.css";
 
-const pages = ["Lectii", "Sugestii", "APL"];
+const pages = ["Lectii", "Sugestii", "APL", "Leaderboard"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function NavBar() {
