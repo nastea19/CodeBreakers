@@ -3,6 +3,7 @@ import SignIn from "./sign-in";
 import SignUp from "./sign-up";
 import FirstPage from "./firstPage";
 import Quiz from "./test";
+import CommentsSection from "./Suggestion";
 
 function Routing() {
   return (
@@ -13,7 +14,7 @@ function Routing() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/firstPage" element={<FirstPage />} />
         <Route path="/Lectii" element={<Quiz />} />
-        <Route path="/Sugestii" element={<Quiz />} />
+        <Route path="/Sugestii" element={<CommentsSection />} />
         <Route path="/APL" element={<Quiz />} />
       </Routes>
     </BrowserRouter>

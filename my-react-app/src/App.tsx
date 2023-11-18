@@ -7,16 +7,10 @@ import "react-toastify/dist/ReactToastify.css";
 import APL from "./components/apl";
 import NavBar from "./components/navbar";
 import Quiz from "./components/test";
+import Routing from "./components/Routing";
 
 function App() {
-  return (
-    <><><>
-      <NavBar />
-
-    </><Quiz />
-    </><APL></APL></>
-
-  );
+  return <Routing></Routing>;
 }
 
 export default App;
