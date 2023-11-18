@@ -9,12 +9,17 @@ import Footer from "./components/footer";
 import NavBar from "./components/navbar";
 import Routing from "./components/Routing";
 import Quiz from "./components/test";
+import { theme } from "./components/theme";
+import { ThemeProvider } from "@emotion/react";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <Routing /> <Footer />
+      <ThemeProvider theme={theme}>
+        <NavBar />
+        <Routing />
+        <Footer />
+      </ThemeProvider>
     </>
   );
 }
