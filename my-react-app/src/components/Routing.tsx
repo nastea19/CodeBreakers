@@ -6,7 +6,6 @@ import Quiz from "./test";
 import APL from "./apl";
 import Leaderboard from "./leaderboard";
 import "../App.css";
-import Quiz from "./test";
 
 
 function Routing() {

@@ -188,3 +188,47 @@ input {
 .navBar{
   text-align: center;
 }
+
+.leaderboard-container {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styles */
+.leaderboard-title {
+  font-size: 24px;
+  color: #333;
+}
+
+/* List styles */
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Item styles */
+.leaderboard-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Username styles */
+.username {
+  font-weight: bold;
+}
+
+/* Score styles */
+.score {
+  color: #888;
+}

@@ -71,9 +71,24 @@ function NavBar() {
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
+
               </Button>
             ))}
           </Box>
+
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              textAlign: 'center',
+              backgroundColor: '#2E8B57', // Set the background color (here, a shade of green)
+              borderRadius: '5px', // Rounded corners
+              padding: '5px 10px', // Adjust padding for better visibility
+            }}
+          >
+            Scorul tau: 100xp
+          </Typography>
 
           <Box sx={{ flexGrow: 0 }}>
             <Menu
