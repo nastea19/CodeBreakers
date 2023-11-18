@@ -1,5 +1,3 @@
-import React from "react";
-import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
@@ -7,7 +5,6 @@ import { Link } from "react-router-dom";
 import { Pagination, TextField } from "@mui/material";
 import Footer from "./footer";
 import "../App.css";
-
 
 function FirstPage() {
   return (

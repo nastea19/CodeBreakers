@@ -12,9 +12,10 @@ import Quiz from "./components/test";
 
 function App() {
   return (
-    <><NavBar /><Routing /> <Footer /></>
-
-
+    <>
+      <NavBar />
+      <Routing /> <Footer />
+    </>
   );
 }
 
