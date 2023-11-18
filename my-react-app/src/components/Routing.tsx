@@ -13,6 +13,9 @@ function Routing() {
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/firstPage" element={<FirstPage />} />
+        <Route path="/Lectii" element={<Quiz />} />
+        <Route path="/Sugestii" element={<Quiz />} />
+        <Route path="/APL" element={<Quiz />} />
       </Routes>
     </BrowserRouter>
   );
