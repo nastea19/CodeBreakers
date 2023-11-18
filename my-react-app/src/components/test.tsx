@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavBar from "./navbar";
+import "../App.css";
 
 interface Question {
   questionText: string;
@@ -38,7 +38,7 @@ const questions: Question[] = [
       "Constituția este o lege fundamentală a unei țări care stabilește structura, funcțiile, drepturile și responsabilitățile fundamentale ale guvernului și cetățenilor.",
       "Constituția reprezintă un cod de conduită pentru cetățeni, dar nu are legătură cu funcțiile guvernamentale.",
       " Constituția este un document simbolic, fără putere legală, care descrie istoria și valorile unei țări",
-      "Constituția este emisă doar de către liderul suprem al unei țări, fără consultarea sau aprobarea cetățenilor.",
+      "Constituția este emisă doar de către liderul suprem al unei țări, fără consultarea sau aprobarea cetățenilor",
     ],
     correctAnswer:
       "Constituția este o lege fundamentală a unei țări care stabilește structura, funcțiile, drepturile și responsabilitățile fundamentale ale guvernului și cetățenilor.",
@@ -65,8 +65,7 @@ const Quiz: React.FC = () => {
 
   return (
     <div>
-      <NavBar />
-      <h1>Testarea nivelului</h1>
+      <h1 className="h1Col">Testarea nivelului</h1>
       {currentQuestion < questions.length ? (
         <div>
           <p>Question {currentQuestion + 1}</p>

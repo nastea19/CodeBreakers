@@ -6,22 +6,17 @@ pairing serif and sans serif
  */
 
  body {
-  background-color: #c3c7f3;
-  margin-top: 100px;
+  background-color: #f5f5f5;
   margin-bottom: 100px;
+  max-width: 90%;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .all {
   background-color: #c3c7f3;
 }
 
-.books-table {
-  background-color: #c8a8e9;
-  border: 2px solid black;
-  padding: 5px;
-  font-family: "Libre Baskerville, serif";
-  font-weight: bold;
-}
 
 .App-header {
   background-color: #282c34;
@@ -64,6 +59,7 @@ pairing serif and sans serif
   display: grid;
   height: 100px;
   place-items: center;
+  
 }
 
 .form-container {
@@ -157,7 +153,7 @@ button[type="submit"]:hover {
   text-align: center;
 }
 
-BookCard {
+.BookCard {
   background-color: #f3dcdc;
 }
 label {
@@ -183,4 +179,12 @@ input {
   background-color: #fff;
   color: #333;
   outline: none;
+}
+
+.h1Col {
+  color: #0066cc;
+  text-align: center;
+}
+.navBar{
+  text-align: center;
 }
