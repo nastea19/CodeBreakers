@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Alert from "@mui/material/Alert";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import NavBar from "./navbar";
+import Footer from "./footer";
 
 interface Comment {
   id: number;
@@ -53,6 +54,7 @@ function CommentsSection() {
 
   return (
     <Box>
+      <NavBar />
       <Typography variant="h2">Sugestii</Typography>
       <ul>
         {commentList.map((comment) => (
@@ -83,6 +85,7 @@ function CommentsSection() {
         </Button>
       </Box>
       {successMessage && <Alert>{successMessage}</Alert>}
+      <Footer />
     </Box>
   );
 }
