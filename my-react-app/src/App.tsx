@@ -6,15 +6,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import APL from "./components/apl";
 import NavBar from "./components/navbar";
+import Routing from "./components/Routing";
 import Quiz from "./components/test";
 
 function App() {
   return (
-    <><><>
-      <NavBar />
+    <><NavBar /><Routing /></>
 
-    </><Quiz />
-    </><APL></APL></>
 
   );
 }

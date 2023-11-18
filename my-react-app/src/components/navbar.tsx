@@ -10,7 +10,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 
-const pages = ["Lectii", "Sugestii", "APL"];
+const pages = ["Lectii", "Sugestii", "APL", "Leaderboard"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function NavBar() {
