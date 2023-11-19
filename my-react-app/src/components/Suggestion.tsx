@@ -49,7 +49,7 @@ function CommentsSection() {
     if (successMessage) {
       const timeoutId = setTimeout(() => {
         setSuccessMessage(null);
-      }, 1000); // 3000 мс (3 секунды) - время отображения сообщения
+      }, 2000); // 3000 мс (3 секунды) - время отображения сообщения
       return () => clearTimeout(timeoutId);
     }
   }, [successMessage]);
@@ -80,7 +80,7 @@ function CommentsSection() {
         <Box
           component="form"
           sx={{
-            "& > :not(style)": { m: 1, width: "50ch" },
+            "& > :not(style)": { mb: 5, width: "50ch" },
           }}
           noValidate
           autoComplete="off"

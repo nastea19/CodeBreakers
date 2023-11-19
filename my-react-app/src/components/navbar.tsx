@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import "../App.css";
 
-const pages = ["Lectii", "Sugestii", "APL", "Leaderboard"];
+const pages = ["Quiz", "Sugestii", "APL", "Leaderboard"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function NavBar() {
@@ -71,7 +71,6 @@ function NavBar() {
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
-
               </Button>
             ))}
           </Box>
@@ -81,10 +80,10 @@ function NavBar() {
             component="div"
             sx={{
               flexGrow: 1,
-              textAlign: 'center',
-              backgroundColor: '#779BE7', // Set the background color (here, a shade of green)
-              borderRadius: '5px', // Rounded corners
-              padding: '5px 10px', // Adjust padding for better visibility
+              textAlign: "center",
+              backgroundColor: "#779BE7", // Set the background color (here, a shade of green)
+              borderRadius: "5px", // Rounded corners
+              padding: "5px 10px", // Adjust padding for better visibility
             }}
           >
             Scorul tau: 100xp

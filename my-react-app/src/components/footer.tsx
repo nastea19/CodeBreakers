@@ -14,6 +14,7 @@ export default function Footer() {
         mb: "-100rem",
         ml: 0,
         mr: 0,
+        borderRadius: 5,
       }}
       component="footer"
     >
