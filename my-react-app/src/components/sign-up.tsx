@@ -36,7 +36,7 @@ function SignUp() {
     const isRegisterSuccess = registerUser(user);
     if (isRegisterSuccess) {
       toast.success("Signed up successfully");
-      navigate("/signIn");
+      navigate("/Quiz");
     } else {
       toast.error("User with this email already exist");
     }
@@ -98,70 +98,8 @@ function SignUp() {
           )}
         </div>
 
+        
         <div>
-
-          <Controller
-            name="country"
-            control={control}
-            defaultValue=""
-            rules={validationRules.country}
-            render={({ field }) => (
-              <div className="select-container">
-                <select {...field} className="custom-select">
-                  <option value="">Select</option>
-                  <option value="albania">Albania</option>
-                  <option value="andorra">Andorra</option>
-                  <option value="austria">Austria</option>
-                  <option value="belarus">Belarus</option>
-                  <option value="belgium">Belgium</option>
-                  <option value="bosnia">Bosnia and Herzegovina</option>
-                  <option value="bulgaria">Bulgaria</option>
-                  <option value="croatia">Croatia</option>
-                  <option value="cyprus">Cyprus</option>
-                  <option value="czech">Czech Republic</option>
-                  <option value="denmark">Denmark</option>
-                  <option value="estonia">Estonia</option>
-                  <option value="finland">Finland</option>
-                  <option value="france">France</option>
-                  <option value="germany">Germany</option>
-                  <option value="greece">Greece</option>
-                  <option value="hungary">Hungary</option>
-                  <option value="iceland">Iceland</option>
-                  <option value="ireland">Ireland</option>
-                  <option value="italy">Italy</option>
-                  <option value="kosovo">Kosovo</option>
-                  <option value="latvia">Latvia</option>
-                  <option value="liechtenstein">Liechtenstein</option>
-                  <option value="lithuania">Lithuania</option>
-                  <option value="luxembourg">Luxembourg</option>
-                  <option value="malta">Malta</option>
-                  <option value="moldova">Moldova</option>
-                  <option value="monaco">Monaco</option>
-                  <option value="montenegro">Montenegro</option>
-                  <option value="netherlands">Netherlands</option>
-                  <option value="north-macedonia">North Macedonia</option>
-                  <option value="norway">Norway</option>
-                  <option value="poland">Poland</option>
-                  <option value="portugal">Portugal</option>
-                  <option value="romania">Romania</option>
-                  <option value="russia">Russia</option>
-                  <option value="san-marino">San Marino</option>
-                  <option value="serbia">Serbia</option>
-                  <option value="slovakia">Slovakia</option>
-                  <option value="slovenia">Slovenia</option>
-                  <option value="spain">Spain</option>
-                  <option value="sweden">Sweden</option>
-                  <option value="switzerland">Switzerland</option>
-                  <option value="ukraine">Ukraine</option>
-                  <option value="united-kingdom">United Kingdom</option>
-                  <option value="vatican-city">Vatican City</option>
-                </select>
-                {formState.errors.country && (
-                  <p className="error">{formState.errors.country.message}</p>
-                )}
-              </div>
-            )}
-          />
           <label>Country</label>
           <Controller
             name="country"
