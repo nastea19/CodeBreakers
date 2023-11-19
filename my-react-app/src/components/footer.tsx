@@ -22,7 +22,7 @@ export default function Footer() {
         <Typography variant="body2" color="white" align="center">
           {"Copyright © "}
           <Link color="inherit" href="Diaspora hub">
-            Diaspora hub
+            Diaspora Hub
           </Link>{" "}
           {new Date().getFullYear()}
           {"."}
