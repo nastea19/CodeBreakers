@@ -327,3 +327,53 @@ input {
   font-size: 16px;
   color: white; /* Light Blue */
 }
+
+/* Quiz styles */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.quiz-question {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333; /* Black */
+}
+
+.quiz-button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #49B6FF; /* Light Blue */
+  color: #fff; /* White */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-button:hover {
+  background-color: #FF499E; /* Pink */
+}
+
+.quiz-options {
+  list-style: none;
+  padding: 0;
+}
+
+.quiz-option {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-option:hover {
+  background-color: #49B6FF; /* Light Blue */
+}
+
+.quiz-option.selected {
+  background-color: #FF499E; /* Pink */
+}

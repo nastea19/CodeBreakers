@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import NavBar from "./navbar";
 import Footer from "./footer";
+import "../App.css";
 
 interface Question {
   questionText: string;
@@ -66,41 +67,40 @@ const Quiz: React.FC = () => {
   };
 
   return (
-    <div>
+    <>
       <NavBar />
-      <h1 className="h1Col">Testarea nivelului</h1>
-      {currentQuestion < questions.length ? (
-        <div>
-          <p>Question {currentQuestion + 1}</p>
-          <p>{questions[currentQuestion].questionText}</p>
-          <ul>
-            {questions[currentQuestion].options.map((option, index) => (
-              <li
-                key={index}
-                onClick={() => handleAnswerClick(option)}
-                style={{
-                  cursor: "pointer",
-                  backgroundColor:
-                    option === selectedAnswer ? "lightblue" : "white",
-                }}
-              >
-                {option}
-              </li>
-            ))}
-          </ul>
-          {selectedAnswer && (
-            <button onClick={handleNextQuestion}>Next Question</button>
-          )}
-          <p>Score: {score}</p>
-        </div>
-      ) : (
-        <div>
-          <h2>Esti un user avansat!</h2>
-          <p>Scorul tau final: {score}</p>
-        </div>
-      )}
+      <div className="quiz-container">
+        <h1 className="h1Col">Testarea nivelului</h1>
+        {currentQuestion < questions.length ? (
+          <div className="question-container">
+            <p>Question {currentQuestion + 1}</p>
+            <p className="quiz-question">{questions[currentQuestion].questionText}</p>
+            <ul className="quiz-options">
+              {questions[currentQuestion].options.map((option, index) => (
+                <li
+                  key={index}
+                  onClick={() => handleAnswerClick(option)}
+                  className={`quiz-option ${option === selectedAnswer ? 'selected' : ''}`}
+                >
+                  {option}
+                </li>
+              ))}
+            </ul>
+            {selectedAnswer && (
+              <button className="quiz-button" onClick={handleNextQuestion}>Next Question</button>
+            )}
+            <p>Score: {score}</p>
+          </div>
+        ) : (
+          <div>
+            <h2 style={{ color: '#FF499E', fontSize: '44px', /* other styles */ }}>Esti un user avansat!</h2>
+
+            <p>Scorul tau final: {score}</p>
+          </div>
+        )}
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
