@@ -99,8 +99,7 @@ function SignUp() {
         </div>
 
         <div>
-          <label>Country</label>
-          // ...
+
           <Controller
             name="country"
             control={control}
@@ -163,7 +162,6 @@ function SignUp() {
               </div>
             )}
           />
-          // ...
           <label>Country</label>
           <Controller
             name="country"
