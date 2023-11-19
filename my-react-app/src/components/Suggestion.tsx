@@ -5,7 +5,11 @@ import NavBar from "./navbar";
 import Footer from "./footer";
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "./theme";
-
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import Divider from "@mui/material/Divider";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
 interface Comment {
   id: number;
   text: string;
@@ -57,6 +61,11 @@ function CommentsSection() {
   return (
     <ThemeProvider theme={theme}>
       <NavBar />
+      {successMessage && (
+        <Alert sx={{ height: "20%", border: 2, borderColor: "#A480CF" }}>
+          {successMessage}
+        </Alert>
+      )}
       <Box
         display="flex"
         alignItems="center"
@@ -65,18 +74,34 @@ function CommentsSection() {
           borderRadius: 10,
           justifyContent: "space-evenly",
         }}
-        minHeight="36rem"
+        minHeight="35rem"
       >
         <Typography variant="h2" color="primary" sx={{ mt: 10 }}>
           Sugestii
         </Typography>
-        <ul>
-          {commentList.map((comment) => (
-            <li key={comment.id}>
-              <strong>{comment.author}:</strong> {comment.text}
-            </li>
-          ))}
-        </ul>
+        <List sx={{ width: "100%", maxWidth: 360 }}>
+          <ListItem alignItems="flex-start">
+            <ListItemText
+              secondary={
+                <React.Fragment>
+                  <Typography
+                    sx={{ display: "inline" }}
+                    component="span"
+                    variant="body1"
+                    color="text.secondary"
+                  >
+                    {commentList.map((comment) => (
+                      <li key={comment.id}>
+                        <strong>{comment.author}:</strong> {comment.text}
+                      </li>
+                    ))}
+                  </Typography>
+                </React.Fragment>
+              }
+            />
+          </ListItem>
+        </List>
+
         <Box
           component="form"
           sx={{
@@ -86,8 +111,8 @@ function CommentsSection() {
           autoComplete="off"
         >
           <TextField
-            multiline
             label="Vocea ta conteaza!"
+            multiline
             rows={5} // Вы можете настроить количество строк
             variant="outlined"
             value={newComment}
@@ -102,7 +127,6 @@ function CommentsSection() {
         >
           Adauga
         </Button>
-        {successMessage && <Alert>{successMessage}</Alert>}
       </Box>
       <Footer />
     </ThemeProvider>
