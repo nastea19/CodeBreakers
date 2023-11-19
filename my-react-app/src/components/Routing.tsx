@@ -8,7 +8,6 @@ import APL from "./apl";
 import Leaderboard from "./leaderboard";
 import "../App.css";
 
-
 function Routing() {
   return (
     <BrowserRouter>

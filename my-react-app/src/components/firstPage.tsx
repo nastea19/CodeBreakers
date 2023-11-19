@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { Pagination, TextField } from "@mui/material";
 import Footer from "./footer";
-import "../App.css";
+//import "../App.css";
 
 function FirstPage() {
   return (

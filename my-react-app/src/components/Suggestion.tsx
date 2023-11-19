@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Alert from "@mui/material/Alert";
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, CssBaseline, TextField, Typography } from "@mui/material";
 import NavBar from "./navbar";
 import Footer from "./footer";
+import { ThemeProvider } from "@emotion/react";
+import { theme } from "./theme";
 
 interface Comment {
   id: number;
@@ -53,40 +55,53 @@ function CommentsSection() {
   }, [successMessage]);
 
   return (
-    <Box>
+    <ThemeProvider theme={theme}>
       <NavBar />
-      <Typography variant="h2">Sugestii</Typography>
-      <ul>
-        {commentList.map((comment) => (
-          <li key={comment.id}>
-            <strong>{comment.author}:</strong> {comment.text}
-          </li>
-        ))}
-      </ul>
+      <CssBaseline />
       <Box
-        component="form"
+        display="flex"
+        alignItems="center"
         sx={{
-          "& > :not(style)": { m: 1, width: "25ch" },
+          flexDirection: "column",
+          borderRadius: 10,
+          justifyContent: "space-between",
         }}
-        noValidate
-        autoComplete="off"
       >
-        <TextField
-          id="outlined-basic"
-          variant="outlined"
-          value={newComment}
-          onChange={handleCommentChange}
-          placeholder="Adauga comentariu"
-          sx={{ backgroundColor: "white", p: 1, width: "100%" }}
-        />
+        <Typography variant="h2" color="primary">
+          Sugestii
+        </Typography>
+        <ul>
+          {commentList.map((comment) => (
+            <li key={comment.id}>
+              <strong>{comment.author}:</strong> {comment.text}
+            </li>
+          ))}
+        </ul>
+        <Box
+          component="form"
+          sx={{
+            "& > :not(style)": { m: 1, width: "25ch" },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            value={newComment}
+            onChange={handleCommentChange}
+            placeholder="Adauga comentariu"
+            sx={{ backgroundColor: "white", p: 1, width: "100%" }}
+          />
 
-        <Button variant="contained" onClick={handleAddComment}>
-          Adauga
-        </Button>
+          <Button variant="contained" onClick={handleAddComment}>
+            Adauga
+          </Button>
+        </Box>
+        {successMessage && <Alert>{successMessage}</Alert>}
       </Box>
-      {successMessage && <Alert>{successMessage}</Alert>}
       <Footer />
-    </Box>
+    </ThemeProvider>
   );
 }
 
