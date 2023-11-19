@@ -57,17 +57,17 @@ function CommentsSection() {
   return (
     <ThemeProvider theme={theme}>
       <NavBar />
-      <CssBaseline />
       <Box
         display="flex"
         alignItems="center"
         sx={{
           flexDirection: "column",
           borderRadius: 10,
-          justifyContent: "space-between",
+          justifyContent: "space-evenly",
         }}
+        minHeight="36rem"
       >
-        <Typography variant="h2" color="primary">
+        <Typography variant="h2" color="primary" sx={{ mt: 10 }}>
           Sugestii
         </Typography>
         <ul>
@@ -80,24 +80,28 @@ function CommentsSection() {
         <Box
           component="form"
           sx={{
-            "& > :not(style)": { m: 1, width: "25ch" },
+            "& > :not(style)": { m: 1, width: "50ch" },
           }}
           noValidate
           autoComplete="off"
         >
           <TextField
-            id="outlined-basic"
+            multiline
+            label="Vocea ta conteaza!"
+            rows={5} // Вы можете настроить количество строк
             variant="outlined"
             value={newComment}
             onChange={handleCommentChange}
             placeholder="Adauga comentariu"
-            sx={{ backgroundColor: "white", p: 1, width: "100%" }}
           />
-
-          <Button variant="contained" onClick={handleAddComment}>
-            Adauga
-          </Button>
         </Box>
+        <Button
+          variant="contained"
+          onClick={handleAddComment}
+          sx={{ mb: 5, mt: 2 }}
+        >
+          Adauga
+        </Button>
         {successMessage && <Alert>{successMessage}</Alert>}
       </Box>
       <Footer />

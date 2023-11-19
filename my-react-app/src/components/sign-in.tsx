@@ -22,7 +22,7 @@ function SignIn() {
 
     const isLoginSuccess = loginUser(data.email, data.password);
     if (isLoginSuccess) {
-      navigate("/");
+      navigate("/Lectii");
       toast.success("Signed in successfully", {
         position: "top-right",
         autoClose: 3000,

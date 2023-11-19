@@ -9,7 +9,6 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
-import { CssBaseline } from "@mui/material";
 import "../App.css";
 
 const pages = ["Lectii", "Sugestii", "APL", "Leaderboard"];
@@ -39,15 +38,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar
-      position="static"
-      className="navBar"
-      sx={{
-        background:
-          "linear-gradient(45deg, #FFFF00 30%, #E94057 30%, #8A2387 90%)",
-      }}
-    >
-      <CssBaseline />
+    <AppBar position="static" className="navBar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -77,13 +68,10 @@ function NavBar() {
                 href={"/" + page}
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: "white",
-                  display: "block",
-                }}
+                sx={{ my: 2, color: "white", display: "block" }}
               >
-                <span color="black">{page}</span>
+                {page}
+
               </Button>
             ))}
           </Box>
@@ -91,13 +79,12 @@ function NavBar() {
           <Typography
             variant="h6"
             component="div"
-            color="#FF499E"
             sx={{
               flexGrow: 1,
-              textAlign: "center",
-              backgroundColor: "#FFFF05", // Set the background color (here, a shade of green)
-              borderRadius: "5px", // Rounded corners
-              padding: "5px 10px", // Adjust padding for better visibility
+              textAlign: 'center',
+              backgroundColor: '#779BE7', // Set the background color (here, a shade of green)
+              borderRadius: '5px', // Rounded corners
+              padding: '5px 10px', // Adjust padding for better visibility
             }}
           >
             Scorul tau: 100xp

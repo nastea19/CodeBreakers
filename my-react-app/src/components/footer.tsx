@@ -11,9 +11,11 @@ export default function Footer() {
       sx={{
         backgroundColor: "#A480CF",
         p: 6,
-        display: "flex",
-        flexDirection: "column",
+        mb: "-100rem",
+        ml: 0,
+        mr: 0,
       }}
+      component="footer"
     >
       <Container maxWidth="sm">
         <Typography variant="body2" color="white" align="center">
