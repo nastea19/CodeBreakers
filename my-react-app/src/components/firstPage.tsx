@@ -19,6 +19,8 @@ function FirstPage() {
             sx={{
               background: "linear-gradient(45deg, #E94057 20%, #8A2387 90%)",
               color: "white",
+              display: "flex",
+              flexDirection: "column",
             }}
           >
             <Typography variant="h4" gutterBottom sx={{ p: 3 }}>
@@ -27,7 +29,15 @@ function FirstPage() {
             <Typography
               variant="body1"
               fontSize="large"
-              sx={{ ml: 20, mr: 20, textAlign: "left", mt: 2 }}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-evenly",
+                alignItems: "center",
+                ml: 5,
+                textAlign: "left",
+                mt: 2,
+              }}
             >
               Suntem încântați să vă avem alături și să creăm împreună un spațiu
               virtual plin de conexiuni, informații și căldură moldovenească.
@@ -35,14 +45,26 @@ function FirstPage() {
             <Typography
               variant="body1"
               fontSize="large"
-              sx={{ ml: 20, mr: 20, textAlign: "left", mt: 2 }}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-evenly",
+                alignItems: "center",
+                ml: 5,
+                textAlign: "left",
+                mt: 2,
+              }}
             >
               Aici, veți găsi nu doar informații utile pentru viața de zi cu zi
               în țara gazdă, ci și o comunitate deschisă, gata să împărtășească
               experiențe, să ofere sfaturi și să creeze legături puternice între
               noi, cei răspândiți în lume.
             </Typography>
-            <Box display="block" textAlign="center" sx={{ p: 3, mt: 2 }}>
+            <Box
+              display="flex"
+              textAlign="center"
+              sx={{ justifyContent: "space-evenly", p: 3, mt: 2 }}
+            >
               <Button
                 href="/signUp"
                 variant="contained"
