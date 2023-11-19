@@ -163,21 +163,23 @@ input {
 }
 
 
-
 .leaderboard-container {
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  padding: 20px;
-  width: 300px;
+  max-width: 800px;
   margin: 0 auto;
-  text-align: center;
+  padding: 20px;
+  background-color: #FF499E;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px; /* Add space between containers */
 }
 
 /* Title styles */
 .leaderboard-title {
   font-size: 24px;
-  color: #333;
+  color: #FFFF05; /* Change the title color */
+  margin-bottom: 20px; /* Add spacing between title and list */
 }
 
 /* List styles */
@@ -193,9 +195,20 @@ input {
   align-items: center;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #fff;
+  background-color: white; /* Change the item background color */
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #A480CF; /* Change the item text color */
+}
+
+/* Username styles */
+.username {
+  font-weight: bold;
+}
+
+/* Score styles */
+.score {
+  color: #FFFF05;
 }
 
 /* Username styles */
@@ -286,4 +299,31 @@ input {
 
 .apl-links {
   color: #49B6FF;
+}
+
+.legislation-courses-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.legislation-course {
+  margin-bottom: 20px; /* Add space between course containers */
+  padding: 20px;
+  background-color: #A480CF; /* Light Purple */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styles */
+.course-title {
+  font-size: 24px;
+  color: #FFFF05; /* Yellow */
+  margin-bottom: 10px; /* Add spacing between title and description */
+}
+
+/* Description styles */
+.course-description {
+  font-size: 16px;
+  color: white; /* Light Blue */
 }

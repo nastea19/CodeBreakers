@@ -4,9 +4,10 @@ import SignUp from "./sign-up";
 import FirstPage from "./firstPage";
 import Quiz from "./test";
 import CommentsSection from "./Suggestion";
-import APL from "./apl";
 import Leaderboard from "./leaderboard";
 import "../App.css";
+import Cursuri from "./cursuri";
+import Portal from "./portal";
 
 function Routing() {
   return (
@@ -18,8 +19,9 @@ function Routing() {
         <Route path="/firstPage" element={<FirstPage />} />
         <Route path="/Quiz" element={<Quiz />} />
         <Route path="/Sugestii" element={<CommentsSection />} />
-        <Route path="/APL" element={<APL />} />
+        <Route path="/portal" element={<Portal />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/cursuri" element={<Cursuri />} />
       </Routes>
     </BrowserRouter>
   );

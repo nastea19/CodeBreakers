@@ -4,7 +4,7 @@ import "../App.css";
 import NavBar from "./navbar";
 import Footer from "./footer";
 
-const APL: React.FC = () => {
+const Portal: React.FC = () => {
   const handleButtonClick = (inputNumber: number, action: string) => {
     // Handle button click logic here if needed
   };
@@ -124,4 +124,4 @@ const APL: React.FC = () => {
   );
 };
 
-export default APL;
+export default Portal;
