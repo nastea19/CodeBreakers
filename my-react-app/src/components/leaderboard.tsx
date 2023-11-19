@@ -12,6 +12,9 @@ interface LeaderboardItem {
 const Leaderboard: React.FC = () => {
   // Sample leaderboard data
   const initialLeaderboard: LeaderboardItem[] = [
+    { id: 1, username: 'Morozan Andrei', score: "150 xp" },
+    { id: 2, username: 'Cioban Ada', score: "125 xp" },
+    { id: 3, username: 'Rusu Emilia', score: "115 xp" },
     { id: 1, username: "Morozan Andrei", score: "150xp" },
     { id: 2, username: "Cioban Ada", score: "125 xp" },
     { id: 3, username: "Rusu Emilia", score: "115 xp" },

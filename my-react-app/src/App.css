@@ -67,7 +67,7 @@ body {
   align-items: center;
   padding: 16px;
   font-family: "Libre Baskerville, serif";
-  background-color: #e3aadd;
+  background-color: #779BE7;
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Box shadow */
   max-width: 300px; /* Maximum width */
@@ -76,14 +76,17 @@ body {
   margin-top: 20px; /* Add margin at the top */
 }
 
+input[type="firstName"],
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
+input[type="country"],
+input[type="domainOfWork"],
 .text-input {
   margin-bottom: 10px;
   border-radius: 8px;
-  background-color: #f4e7fb;
+  /* background-color: #A480CF; */
   padding: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   margin-left: 20px;
@@ -98,7 +101,7 @@ label {
 .text-input {
   margin-bottom: 10px; /* Add some margin at the bottom of input elements */
   border-radius: 8px; /* Make the input fields slightly rounder */
-  background-color: #f4e7fb; /* Add a background color */
+  background-color: #A480CF; /* Add a background color */
   padding: 8px; /* Add padding to the input fields */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a box shadow */
   margin-left: 20px;
@@ -121,40 +124,14 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #c8a8e9; /* Change the background color on hover */
+  background-color: #A480CF; /* Change the background color on hover */
 }
 
 .input-pair {
   display: flex;
   flex-direction: column;
 }
-/* 
-.input-column {
-  margin-bottom: 10px; 
-} */
 
-.bookcard {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row; /* Set to "row" for horizontal line */
-  align-items: stretch; /* Add this line to make all items have the same height */
-  font-family: "Libre Baskerville, serif";
-  margin: 30px; /* Add margin for space between items */
-  background-color: #e3aadd;
-}
-
-.bookcardspacing {
-  margin: 7px;
-  /* background-color: #F3DCDC; */
-}
-
-.h2 {
-  text-align: center;
-}
-
-.BookCard {
-  background-color: #f3dcdc;
-}
 label {
   display: block;
   margin-bottom: 5px;
@@ -180,13 +157,12 @@ input {
   outline: none;
 }
 
-.h1Col {
-  color: #0066cc;
-  text-align: center;
-}
 .navBar {
   text-align: center;
+  background-color: #FF499E !important;
 }
+
+
 
 .leaderboard-container {
   background-color: #f0f0f0;
@@ -230,4 +206,84 @@ input {
 /* Score styles */
 .score {
   color: #888;
+}
+
+
+/* Modify the existing CSS code */
+
+.select-container {
+  position: relative;
+}
+
+.custom-select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+}
+
+.custom-select-country {
+  /* Add these styles for the Country select */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+}
+
+.custom-select-domain {
+  /* Add these styles for the Domain of Work select */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+}
+
+.apl-container {
+  background-color: #a480cf; /* Use the color #A480CF for the container background */
+  padding: 20px;
+  color: black; /* Set text color to white */
+}
+
+.apl-content {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff; /* Set background color for the content */
+}
+
+.apl-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.apl-buttons {
+  margin-top: 20px;
+}
+
+.apl-buttons button {
+  background-color: #d264b6; /* Use the color #D264B6 for button background */
+  color: #fff; /* Set text color to white */
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.apl-buttons button:last-child {
+  margin-right: 0;
+}
+
+.apl-buttons button:hover {
+  background-color: #a480cf;
+}
+
+.apl-links {
+  color: #49B6FF;
 }
