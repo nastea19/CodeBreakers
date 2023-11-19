@@ -36,7 +36,7 @@ function SignUp() {
     const isRegisterSuccess = registerUser(user);
     if (isRegisterSuccess) {
       toast.success("Signed up successfully");
-      navigate("/sign-in");
+      navigate("/signIn");
     } else {
       toast.error("User with this email already exist");
     }
